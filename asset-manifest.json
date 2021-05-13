@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Agency/static/css/main.f5043432.chunk.css",
+    "main.js": "/Agency/static/js/main.5ff4b405.chunk.js",
+    "main.js.map": "/Agency/static/js/main.5ff4b405.chunk.js.map",
+    "runtime-main.js": "/Agency/static/js/runtime-main.586c99bd.js",
+    "runtime-main.js.map": "/Agency/static/js/runtime-main.586c99bd.js.map",
+    "static/js/2.dd920f41.chunk.js": "/Agency/static/js/2.dd920f41.chunk.js",
+    "static/js/2.dd920f41.chunk.js.map": "/Agency/static/js/2.dd920f41.chunk.js.map",
+    "index.html": "/Agency/index.html",
+    "precache-manifest.4d1abe7730651e14f102869c2fcc7377.js": "/Agency/precache-manifest.4d1abe7730651e14f102869c2fcc7377.js",
+    "service-worker.js": "/Agency/service-worker.js",
+    "static/css/main.f5043432.chunk.css.map": "/Agency/static/css/main.f5043432.chunk.css.map",
+    "static/js/2.dd920f41.chunk.js.LICENSE.txt": "/Agency/static/js/2.dd920f41.chunk.js.LICENSE.txt",
+    "static/media/MainBanner.scss": "/Agency/static/media/model_shade.bc9444da.png",
+    "static/media/ThirdSection.scss": "/Agency/static/media/output.d33daca2.png",
+    "static/media/Footer.scss": "/Agency/static/media/footer-background.ead36fc4.png",
+    "static/media/macbook.png": "/Agency/static/media/macbook.8b1bf018.png",
+    "static/media/slider_image1.png": "/Agency/static/media/slider_image1.566e78b3.png",
+    "static/media/slider_image2.png": "/Agency/static/media/slider_image2.0bf7b301.png",
+    "static/media/slider_image3.png": "/Agency/static/media/slider_image3.420044ae.png",
+    "static/media/small-image1.png": "/Agency/static/media/small-image1.9969a486.png",
+    "static/media/small-image2.png": "/Agency/static/media/small-image2.eaaa04d4.png",
+    "static/media/small-image3.png": "/Agency/static/media/small-image3.d2ca01e8.png",
+    "static/media/testimonials_image1.png": "/Agency/static/media/testimonials_image1.0bf7b301.png",
+    "static/media/testimonials_image2.png": "/Agency/static/media/testimonials_image2.566e78b3.png",
+    "static/media/testimonials_image3.png": "/Agency/static/media/testimonials_image3.d4030d94.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.586c99bd.js",
+    "static/js/2.dd920f41.chunk.js",
+    "static/css/main.f5043432.chunk.css",
+    "static/js/main.5ff4b405.chunk.js"
+  ]
+}
