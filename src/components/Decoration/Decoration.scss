@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+
+.o-decoration-triangle {
+  width: 1200px;
+  height: 600px;
+
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  background-color: $color-secondary;
+
+  pointer-events: none;
+
+  &--small {
+    width: 600px;
+    height: 300px;
+  }
+}
+
+.o-decoration-square {
+  width: 500px;
+  height: 500px;
+
+  background-color: $color-primary;
+  transform: translateY(-50%) rotate(45deg);
+
+  pointer-events: none;
+
+  &--small {
+    width: 200px;
+    height: 200px;
+  }
+}

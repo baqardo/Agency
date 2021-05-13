@@ -1,0 +1,17 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.o-typography-header {
+  @include font-peace-sans;
+  font-size: 6.81rem;
+  font-weight: 100;
+  line-height: 1.1;
+
+  color: $font-color-black2;
+
+  user-select: none;
+
+  &--center {
+    text-align: center;
+  }
+}

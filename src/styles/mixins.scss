@@ -1,0 +1,33 @@
+@mixin font-lato-bold {
+  font-family: Lato;
+  font-weight: 700;
+}
+
+@mixin font-lato-black {
+  font-family: Lato;
+  font-weight: 900;
+}
+
+@mixin font-lato-lemon-milk-light {
+  font-family: LemonMilkLight;
+}
+
+@mixin font-lato-lemon-milk {
+  font-family: LemonMilk;
+}
+
+@mixin font-lato-lemon-milk-bold {
+  font-family: LemonMilkBold;
+}
+
+@mixin font-peace-sans {
+  font-family: PeaceSans;
+}
+
+@mixin font-open-sans {
+  font-family: "Open Sans";
+}
+
+@mixin font-pump-let-plain {
+  font-family: "Pump Demi Bold LET";
+}

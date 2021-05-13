@@ -1,0 +1,169 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+$first-bp: 950px;
+$second-bp: 750px;
+$third-bp: 450px;
+
+.o-testimonials {
+  &__container {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    width: 850px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $second-bp) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    transform: rotate(-45deg) scale(1.2);
+
+    &-grid {
+      display: grid;
+    }
+
+    &-wrapper {
+      grid-row: 1;
+      grid-column: 1;
+
+      width: 310px;
+      height: 310px;
+
+      transform: rotate(45deg);
+
+      overflow: hidden;
+
+      background-color: $color-tertiary;
+      box-shadow: 0 0 30px rgba($color-secondary, 0.3);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      position: relative;
+      z-index: 10;
+
+      @media screen and (max-width: $first-bp) {
+        width: 240px;
+        height: 240px;
+        margin-left: 1.5rem;
+      }
+
+      @media screen and (max-width: $second-bp) {
+        margin: 0 auto;
+        margin-bottom: 6rem;
+      }
+
+      @media screen and (max-width: $third-bp) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+
+  &__content {
+    width: 700px;
+
+    margin-left: 8rem;
+
+    display: flex;
+
+    @media screen and (max-width: $first-bp) {
+      width: 400px;
+      margin-left: 4rem;
+    }
+
+    @media screen and (max-width: $second-bp) {
+      margin: 0 auto;
+    }
+
+    &::before {
+      content: "\201C";
+      height: 230px;
+
+      font-family: "Passion One";
+      font-size: 20rem;
+      color: $font-color-black3;
+      line-height: 0.8;
+
+      @media screen and (max-width: $third-bp) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    grid-row: 1;
+    grid-column: 1;
+
+    margin-top: 2rem;
+    @media screen and (max-width: $third-bp) {
+      width: 300px;
+      margin-left: 2rem;
+    }
+
+    &-grid {
+      display: grid;
+    }
+  }
+
+  &__name {
+    @include font-open-sans;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $font-color-black2;
+
+    margin-top: 4rem;
+  }
+
+  &__people {
+    display: flex;
+
+    margin-top: 4rem;
+
+    @media screen and (max-width: $third-bp) {
+      justify-content: center;
+    }
+
+    &-icon {
+      width: 70px;
+
+      clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+      transform: rotate(-45deg);
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+
+        transform: rotate(45deg);
+
+        transition: transform 0.5s, border 0.5s;
+
+        margin-right: 3rem;
+
+        border: 3px solid transparent;
+
+        &--active {
+          border: 4px solid $color-primary;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          transform: translateY(-5px) rotate(45deg);
+        }
+      }
+    }
+  }
+}

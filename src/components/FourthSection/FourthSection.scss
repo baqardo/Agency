@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+
+$bp-first: 700px;
+$bp-second: 500px;
+
+.c-fourth-section {
+  &__background {
+    background-color: $color-grey1;
+  }
+
+  &__padding {
+    padding: 10rem 0;
+  }
+
+  &__header {
+    @media screen and (max-width: $bp-first) {
+      font-size: 5.2rem;
+    }
+    @media screen and (max-width: $bp-second) {
+      font-size: 4.5rem;
+    }
+    &-wrapper {
+      margin-bottom: 6rem;
+
+      @media screen and (max-width: $bp-first) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../../styles/variables.scss";
+
+$bp-first: 900px;
+$bp-second: 400px;
+
+.o-up-arrow {
+  &__container {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+
+    z-index: 100;
+
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-primary;
+    border-radius: 50%;
+    box-shadow: 0 5px 8px rgba($color-black3, 0.4);
+
+    opacity: 0;
+    display: none;
+
+    transition: 0.5s;
+
+    &:hover {
+      cursor: pointer;
+
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba($color-black3, 0.5);
+    }
+
+    @media screen and (max-width: $bp-first) {
+      width: 60px;
+      height: 60px;
+
+      right: 20px;
+      bottom: 20px;
+    }
+
+    @media screen and (max-width: $bp-second) {
+      width: 50px;
+      height: 50px;
+
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+
+  &__icon {
+    font-size: 6.5rem;
+    color: $color-tertiary;
+
+    @media screen and (max-width: $bp-first) {
+      font-size: 4.5rem;
+    }
+
+    @media screen and (max-width: $bp-second) {
+      font-size: 3rem;
+    }
+  }
+}

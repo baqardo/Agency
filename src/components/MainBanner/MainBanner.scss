@@ -1,0 +1,262 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/fonts.scss";
+
+$first-bp: 1200px;
+$second-bp: 900px;
+$third-bp: 650px;
+$fourth-bp: 450px;
+
+$bp-big: 1650px;
+
+$height-first-bp: 1050px;
+$height-second-bp: 850px;
+$height-third-bp: 650px;
+
+$height-big-bp: 1450px;
+
+.main-header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+  height: max-content;
+
+  color: $color-tertiary;
+
+  background-image: url("../../assets/img/city-image.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  @media only screen and (max-height: $height-third-bp) {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+
+  @media only screen and (max-width: $third-bp) {
+    padding-top: 12rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: -20;
+
+    width: 100%;
+    min-height: 90vh;
+    height: max-content;
+
+    background-image: url("../../assets/img/city-image.png"), url("../../assets/img/model_shade.png");
+    background-color: $color-primary;
+    background-size: cover, contain;
+    background-position: center, 38rem 10rem;
+    background-blend-mode: multiply, color-dodge;
+    background-repeat: no-repeat;
+
+    user-select: none;
+
+    @media only screen and (max-width: $first-bp) {
+      background-position: center, 25rem;
+    }
+
+    @media screen and (max-width: $second-bp) {
+      background-image: url("../../assets/img/city-image.png");
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: multiply;
+    }
+
+    @media only screen and (max-height: $height-first-bp) {
+      background-position: center, 45rem 0rem;
+    }
+
+    @media only screen and (max-height: $height-second-bp) {
+      background-position: center, 50rem 5rem;
+    }
+
+    @media only screen and (min-width: $bp-big) {
+      background-position: center, 30vw 5rem;
+    }
+
+    @media only screen and (min-width: $bp-big) and (max-height: $height-first-bp) {
+      background-position: center, 80rem 5rem;
+    }
+
+    @media only screen and (min-width: $bp-big) and (max-height: $height-second-bp) {
+      background-position: center, 90rem 5rem;
+    }
+
+    @media only screen and (max-height: $height-third-bp) {
+      background-image: url("../../assets/img/city-image.png");
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: multiply;
+    }
+  }
+
+  &__content {
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-left: 4rem;
+
+    @media screen and (max-width: $second-bp) {
+      width: 100%;
+      align-items: center;
+
+      margin-left: 0;
+    }
+
+    @media only screen and (max-height: $height-third-bp) {
+      width: 100%;
+      align-items: center;
+    }
+
+    @media only screen and (min-width: $bp-big) {
+      width: 100%;
+      align-items: center;
+
+      margin-left: -10rem;
+    }
+  }
+
+  &__button {
+    &-wrapper {
+      position: relative;
+      z-index: 10;
+
+      align-self: center;
+
+      margin-top: 2rem;
+    }
+  }
+
+  &__text {
+    &--behind {
+      position: relative;
+      z-index: -10;
+    }
+
+    &-wrapper {
+      display: grid;
+    }
+
+    &-inner {
+      grid-column: 1;
+      grid-row: 1;
+
+      @include font-lato-lemon-milk-bold;
+      font-size: 14rem;
+      line-height: 1;
+      text-transform: uppercase;
+      text-align: center;
+
+      @media screen and (max-width: $first-bp) {
+        font-size: 11rem;
+      }
+
+      @media only screen and (max-height: $height-second-bp) {
+        font-size: 11rem;
+      }
+
+      @media screen and (max-width: $second-bp) {
+        font-size: 10rem;
+      }
+
+      @media screen and (max-width: $third-bp) {
+        font-size: 6.5rem;
+      }
+
+      @media screen and (max-width: $fourth-bp) {
+        font-size: 4.8rem;
+      }
+
+      &--shadow {
+        @include font-lato-lemon-milk-light;
+        letter-spacing: 6px;
+        color: transparent;
+
+        margin-top: 1.5rem;
+
+        @media screen and (max-width: $third-bp) {
+          margin-top: 1rem;
+        }
+
+        @media screen and (max-width: $fourth-bp) {
+          margin-top: 0.8rem;
+        }
+      }
+
+      &--model {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100px;
+          left: 650px;
+
+          width: 1100px;
+          height: 1100px;
+
+          background-image: url("../../assets/img/model-image.png");
+          background-size: 95%;
+          background-repeat: no-repeat;
+
+          @media only screen and (max-width: $first-bp) {
+            top: 200px;
+            left: 550px;
+
+            width: 800px;
+            height: 800px;
+          }
+
+          @media only screen and (max-width: $second-bp) {
+            display: none;
+          }
+
+          @media only screen and (min-height: $height-big-bp) {
+            width: 80vh;
+            height: 80vh;
+          }
+
+          @media only screen and (max-height: $height-first-bp) {
+            top: 0%;
+            width: 900px;
+            height: 900px;
+          }
+
+          @media only screen and (max-height: $height-second-bp) {
+            top: 5%;
+            width: 700px;
+            height: 700px;
+          }
+          @media only screen and (max-height: $height-third-bp) {
+            display: none;
+          }
+
+          @media only screen and (min-width: $bp-big) {
+            left: 52%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+
+  &-first {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}

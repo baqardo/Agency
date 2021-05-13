@@ -1,0 +1,26 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+$bp-first: 700px;
+$bp-second: 400px;
+
+.o-typography-paragraph {
+  @include font-open-sans;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: $font-color-black2;
+
+  user-select: none;
+
+  @media screen and (max-width: $bp-first) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (max-width: $bp-second) {
+    font-size: 1.5rem;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+}

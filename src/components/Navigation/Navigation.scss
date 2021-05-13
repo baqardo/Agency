@@ -1,0 +1,166 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+$first-bp: 950px;
+$second-bp: 750px;
+$third-bp: 600px;
+
+$first-height: 500px;
+
+.l-navigation-header {
+  width: 100%;
+
+  position: absolute;
+  z-index: 20;
+  color: $font-color-white;
+
+  filter: drop-shadow(2px 4px 6px rgba($color-secondary, 0.7));
+
+  background-color: transparent;
+
+  padding: 2rem 6rem;
+
+  @media only screen and (max-width: $first-bp) {
+    padding: 2rem 1rem;
+  }
+
+  @media only screen and (max-width: $second-bp) {
+    padding: 3rem 2rem;
+  }
+
+  @media only screen and (max-width: $third-bp) {
+    padding: 2rem 2rem;
+  }
+
+  @media only screen and (max-height: $first-height) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.c-navigation {
+  &-wrapper {
+    width: 100%;
+
+    display: flex;
+
+    @media only screen and (max-width: $second-bp) {
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    @include font-lato-black;
+    font-size: 4.3rem;
+
+    &-wrapper {
+      margin-right: auto;
+
+      @media only screen and (max-width: $second-bp) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    @include font-lato-bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    margin-right: 2rem;
+
+    transition: 0.5s;
+
+    user-select: none;
+    @media only screen and (max-width: $second-bp) {
+      &:nth-last-of-type(1) {
+        margin-right: 0;
+      }
+      margin-top: 1rem;
+    }
+
+    @media only screen and (max-width: $third-bp) {
+      margin-right: 2rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      transform: translateY(-3px);
+      filter: drop-shadow(2px 6px 10px rgba($color-secondary, 0.7));
+
+      color: $color-grey1;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-right: 3rem;
+
+      @media only screen and (max-width: $first-bp) {
+        margin-right: 0;
+      }
+
+      @media only screen and (max-width: $third-bp) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 2rem !important;
+
+    margin-right: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media only screen and (max-width: $second-bp) {
+        display: none;
+      }
+    }
+  }
+
+  &__hamburger {
+    width: 30px;
+    height: min-content;
+
+    margin: 0 auto;
+    margin-top: -1.5rem;
+    margin-bottom: -1.5rem;
+
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media only screen and (max-height: $first-height) {
+      margin-top: -0.5rem;
+      margin-bottom: -0.5rem;
+    }
+
+    &-line {
+      width: 30px;
+      height: 3px;
+      background-color: $color-tertiary;
+
+      margin-top: 5px;
+
+      @media only screen and (max-height: $first-height) {
+        height: 3px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+      }
+    }
+  }
+}

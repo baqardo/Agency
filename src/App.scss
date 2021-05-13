@@ -1,0 +1,35 @@
+@import "styles/variables.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%; //? 1rem = 10px - default
+}
+
+body {
+  position: relative;
+  z-index: -300;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  position: relative;
+  z-index: -200;
+}
+
+.app {
+  position: relative;
+  z-index: -100;
+
+  overflow-x: hidden;
+}
